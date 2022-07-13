@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import MapChart from "./MapChart";
 
 function App() {
     const [ uid, setUid] = useState('');
@@ -36,12 +37,15 @@ function App() {
     }
 
     return (
-        <div className='text-center'>
+        <div>
             <h2>Species Tracker:</h2>
             <div>UID: {uid}</div>
             <div>Name: {speciesName}</div>
             <div>G rank: {roundedGRank}</div>
             <div style={{color: color}}>{roundedGRank}</div>
+        <div>
+            <MapChart />
+          </div>
         </div>
     );
 }
